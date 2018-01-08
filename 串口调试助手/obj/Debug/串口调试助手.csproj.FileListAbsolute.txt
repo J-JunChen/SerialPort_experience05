@@ -1,0 +1,61 @@
+D:\AI   VS 2010\源程序\串口调试助手\串口调试助手\bin\Debug\串口调试助手.exe.config
+D:\AI   VS 2010\源程序\串口调试助手\串口调试助手\bin\Debug\串口调试助手.exe
+D:\AI   VS 2010\源程序\串口调试助手\串口调试助手\bin\Debug\串口调试助手.pdb
+D:\AI   VS 2010\源程序\串口调试助手\串口调试助手\obj\Debug\串口调试助手.csprojResolveAssemblyReference.cache
+D:\AI   VS 2010\源程序\串口调试助手\串口调试助手\obj\Debug\串口调试助手.Properties.Resources.resources
+D:\AI   VS 2010\源程序\串口调试助手\串口调试助手\obj\Debug\串口调试助手.csproj.GenerateResource.Cache
+D:\AI   VS 2010\源程序\串口调试助手\串口调试助手\obj\Debug\串口调试助手.exe
+D:\AI   VS 2010\源程序\串口调试助手\串口调试助手\obj\Debug\串口调试助手.pdb
+D:\AI   VS 2010\源程序\串口调试助手\串口调试助手\obj\Debug\串口调试助手.AboutForm.resources
+D:\AI   VS 2010\源程序\串口调试助手\串口调试助手\obj\Debug\串口调试助手.MainForm.resources
+C:\Users\陈俊杰\Desktop\串口调试助手\串口调试助手\bin\Debug\串口调试助手.exe.config
+C:\Users\陈俊杰\Desktop\串口调试助手\串口调试助手\obj\Debug\串口调试助手.exe
+C:\Users\陈俊杰\Desktop\串口调试助手\串口调试助手\obj\Debug\串口调试助手.pdb
+C:\Users\陈俊杰\Desktop\串口调试助手\串口调试助手\bin\Debug\串口调试助手.exe
+C:\Users\陈俊杰\Desktop\串口调试助手\串口调试助手\bin\Debug\串口调试助手.pdb
+C:\Users\陈俊杰\Desktop\串口调试助手\串口调试助手\obj\Debug\串口调试助手.AboutForm.resources
+C:\Users\陈俊杰\Desktop\串口调试助手\串口调试助手\obj\Debug\串口调试助手.MainForm.resources
+C:\Users\陈俊杰\Desktop\串口调试助手\串口调试助手\obj\Debug\串口调试助手.Properties.Resources.resources
+C:\Users\陈俊杰\Desktop\串口调试助手\串口调试助手\obj\Debug\串口调试助手.csproj.GenerateResource.Cache
+E:\串口调试助手\串口调试助手\bin\Debug\串口调试助手.exe.config
+E:\串口调试助手\串口调试助手\obj\Debug\串口调试助手.exe
+E:\串口调试助手\串口调试助手\obj\Debug\串口调试助手.pdb
+E:\串口调试助手\串口调试助手\bin\Debug\串口调试助手.exe
+E:\串口调试助手\串口调试助手\bin\Debug\串口调试助手.pdb
+E:\串口调试助手\串口调试助手\obj\Debug\串口调试助手.csprojResolveAssemblyReference.cache
+E:\串口调试助手\串口调试助手\obj\Debug\串口调试助手.AboutForm.resources
+E:\串口调试助手\串口调试助手\obj\Debug\串口调试助手.MainForm.resources
+E:\串口调试助手\串口调试助手\obj\Debug\串口调试助手.Properties.Resources.resources
+E:\串口调试助手\串口调试助手\obj\Debug\串口调试助手.csproj.GenerateResource.Cache
+C:\Users\陈俊杰\Desktop\串口调试助手\串口调试助手\obj\Debug\串口调试助手.LoginForm.resources
+C:\Users\陈俊杰\Desktop\串口调试助手\串口调试助手\obj\Debug\串口调试助手.csprojResolveAssemblyReference.cache
+C:\Users\Jun\Desktop\串口调试助手\串口调试助手\bin\Debug\串口调试助手.exe.config
+C:\Users\Jun\Desktop\串口调试助手\串口调试助手\obj\Debug\串口调试助手.exe
+C:\Users\Jun\Desktop\串口调试助手\串口调试助手\obj\Debug\串口调试助手.pdb
+C:\Users\Jun\Desktop\串口调试助手1\串口调试助手\bin\Debug\串口调试助手.exe.config
+C:\Users\Jun\Desktop\串口调试助手1\串口调试助手\obj\Debug\串口调试助手.exe
+C:\Users\Jun\Desktop\串口调试助手1\串口调试助手\obj\Debug\串口调试助手.pdb
+C:\Users\Jun\Desktop\串口调试助手1\串口调试助手\bin\Debug\串口调试助手.exe
+C:\Users\Jun\Desktop\串口调试助手1\串口调试助手\bin\Debug\串口调试助手.pdb
+C:\Users\Jun\Desktop\串口调试助手1\串口调试助手\obj\Debug\串口调试助手.csprojResolveAssemblyReference.cache
+C:\Users\Jun\Desktop\串口调试助手1\串口调试助手\obj\Debug\串口调试助手.AboutForm.resources
+C:\Users\Jun\Desktop\串口调试助手1\串口调试助手\obj\Debug\串口调试助手.LoginForm.resources
+C:\Users\Jun\Desktop\串口调试助手1\串口调试助手\obj\Debug\串口调试助手.MainForm.resources
+C:\Users\Jun\Desktop\串口调试助手1\串口调试助手\obj\Debug\串口调试助手.Properties.Resources.resources
+C:\Users\Jun\Desktop\串口调试助手1\串口调试助手\obj\Debug\串口调试助手.csproj.GenerateResource.Cache
+C:\Users\陈俊杰\Desktop\串口调试助手1\串口调试助手\bin\Debug\串口调试助手.exe.config
+C:\Users\陈俊杰\Desktop\串口调试助手1\串口调试助手\obj\Debug\串口调试助手.exe
+C:\Users\陈俊杰\Desktop\串口调试助手1\串口调试助手\obj\Debug\串口调试助手.pdb
+C:\Users\陈俊杰\Desktop\201541412127 陈俊杰\串口调试助手\bin\Debug\串口调试助手.exe.config
+C:\Users\陈俊杰\Desktop\201541412127 陈俊杰\串口调试助手\obj\Debug\串口调试助手.exe
+C:\Users\陈俊杰\Desktop\201541412127 陈俊杰\串口调试助手\obj\Debug\串口调试助手.pdb
+C:\Users\陈俊杰\Desktop\201541412127 陈俊杰\串口调试助手\bin\Debug\串口调试助手.exe
+C:\Users\陈俊杰\Desktop\201541412127 陈俊杰\串口调试助手\bin\Debug\串口调试助手.pdb
+C:\Users\陈俊杰\Desktop\201541412127 陈俊杰\串口调试助手\obj\Debug\串口调试助手.csprojResolveAssemblyReference.cache
+C:\Users\陈俊杰\Desktop\201541412127 陈俊杰\串口调试助手\obj\Debug\串口调试助手.AboutForm.resources
+C:\Users\陈俊杰\Desktop\201541412127 陈俊杰\串口调试助手\obj\Debug\串口调试助手.MainForm.resources
+C:\Users\陈俊杰\Desktop\201541412127 陈俊杰\串口调试助手\obj\Debug\串口调试助手.Properties.Resources.resources
+C:\Users\陈俊杰\Desktop\201541412127 陈俊杰\串口调试助手\obj\Debug\串口调试助手.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\201541412127 陈俊杰\串口调试助手\bin\Debug\串口调试助手.exe.config
+C:\Users\Administrator\Desktop\201541412127 陈俊杰\串口调试助手\obj\Debug\串口调试助手.exe
+C:\Users\Administrator\Desktop\201541412127 陈俊杰\串口调试助手\obj\Debug\串口调试助手.pdb

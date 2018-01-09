@@ -59,3 +59,10 @@ C:\Users\陈俊杰\Desktop\201541412127 陈俊杰\串口调试助手\obj\Debug\�
 C:\Users\Administrator\Desktop\201541412127 陈俊杰\串口调试助手\bin\Debug\串口调试助手.exe.config
 C:\Users\Administrator\Desktop\201541412127 陈俊杰\串口调试助手\obj\Debug\串口调试助手.exe
 C:\Users\Administrator\Desktop\201541412127 陈俊杰\串口调试助手\obj\Debug\串口调试助手.pdb
+C:\Users\Administrator\Desktop\201541412127 陈俊杰\串口调试助手\bin\Debug\串口调试助手.exe
+C:\Users\Administrator\Desktop\201541412127 陈俊杰\串口调试助手\bin\Debug\串口调试助手.pdb
+C:\Users\Administrator\Desktop\201541412127 陈俊杰\串口调试助手\obj\Debug\串口调试助手.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\201541412127 陈俊杰\串口调试助手\obj\Debug\串口调试助手.AboutForm.resources
+C:\Users\Administrator\Desktop\201541412127 陈俊杰\串口调试助手\obj\Debug\串口调试助手.MainForm.resources
+C:\Users\Administrator\Desktop\201541412127 陈俊杰\串口调试助手\obj\Debug\串口调试助手.Properties.Resources.resources
+C:\Users\Administrator\Desktop\201541412127 陈俊杰\串口调试助手\obj\Debug\串口调试助手.csproj.GenerateResource.Cache

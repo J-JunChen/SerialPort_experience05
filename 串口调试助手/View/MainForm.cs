@@ -55,27 +55,27 @@ namespace 串口调试助手
             stopBitComboBox.Text = stopBitComboBox.Items[0].ToString(); //停止位设置
 
 
-            string[] ArrayComPortsName = SerialPort.GetPortNames(); //获取当前串口个数名称
-            if (ArrayComPortsName.Length != 0)
-            {
-                Array.Sort(ArrayComPortsName);
+        string[] ArrayComPortsName = SerialPort.GetPortNames(); //获取当前串口个数名称
+        if (ArrayComPortsName.Length != 0)
+        {
+            Array.Sort(ArrayComPortsName);
 
-                for (int i = 0; i < ArrayComPortsName.Length; i++)
-                {
-                    portComboBox.Items.Add(ArrayComPortsName[i]);
-                }
-                portComboBox.Text = ArrayComPortsName[0];
+        for (int i = 0; i < ArrayComPortsName.Length; i++)
+        {
+            portComboBox.Items.Add(ArrayComPortsName[i]);
+        }
+        portComboBox.Text = ArrayComPortsName[0];
 
-                if (portComboBox.Items.Count == 1)
-                    serialPortStated.Text = portComboBox.Items[0].ToString() + " is Connected !";
-                else
-                    serialPortStated.Text = portComboBox.Items[portComboBox.SelectedIndex].ToString() + " is Connected !";
+            if (portComboBox.Items.Count == 1)
+                serialPortStated.Text = portComboBox.Items[0].ToString() + " is Connected !";
+            else
+                serialPortStated.Text = portComboBox.Items[portComboBox.SelectedIndex].ToString() + " is Connected !";
 
-            }
+        }
        
-            openButton.Enabled = true;
-            sendButton.Enabled = false;
-            closeButton.Enabled = false;
+            openButton.Enabled = true;  //“打开按钮”可用
+            sendButton.Enabled = false; //“发送按钮”不可用，因为没打开串口，直接发送指令会报错
+            closeButton.Enabled = false; //“关闭按钮”不可用，没有打开，不能关闭；没有关闭，不能打开
             groupBox7.Enabled = false;           
         }
 
@@ -110,11 +110,11 @@ namespace 串口调试助手
                 do
                 {
                     //serialPort.ReadBufferSize();
-                    int count = serialPort.BytesToRead;
-                    if (count <= 0)
+                    int count = serialPort.BytesToRead;  // 串口的接收缓冲区，
+                    if (count <= 0)   //count <= 0 ：表示没有接收到指令
                         break;
                     Byte[] dataBuff = new Byte[count];
-                    serialPort.Read(dataBuff, 0, count);
+                    serialPort.Read(dataBuff, 0, count);  //串口读取接收缓存区的数据
                     string str = null;
                     string strAscii = null;
                     string tempStr = null;
@@ -193,8 +193,9 @@ namespace 串口调试助手
                 serialPort.DataBits = Convert.ToInt16(dataBitComboBox.Text);
                 serialPort.StopBits = (StopBits)Enum.Parse(typeof(StopBits), stopBitComboBox.Text);
                 serialPort.Open();
+
                 serialPort.ReceivedBytesThreshold = 7; //获取或设置 System.IO.Ports.SerialPort.DataReceived 事件发生前内部输入缓冲区中的字节数。
-                serialPort.DataReceived += new SerialDataReceivedEventHandler(serialPort_DataReceived);
+                serialPort.DataReceived += new SerialDataReceivedEventHandler(serialPort_DataReceived); //串口接收指令事件
 
                 openButton.Enabled = false;  //打开按钮不可用
                 closeButton.Enabled = true;
@@ -237,74 +238,74 @@ namespace 串口调试助手
 
         }
 
-        /// <summary>
-        /// “发送”按钮事件
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void sendButton_Click(object sender, EventArgs e)
-        {
-            bool flag = true;
-            if (serialPort.IsOpen)  //判断串口是否打开
+            /// <summary>
+            /// “发送”按钮事件
+            /// </summary>
+            /// <param name="sender"></param>
+            /// <param name="e"></param>
+            private void sendButton_Click(object sender, EventArgs e)
             {
-                if (sendTextBox.Text != " ") //如果发送窗口不为空，便可发送指令
+                bool flag = true;
+                if (serialPort.IsOpen)  //判断串口是否打开
                 {
-                    if (hexSendRadioButton.Checked) //如果选中了16进制发送
+                    if (sendTextBox.Text != " ") //如果发送窗口不为空，便可发送指令
                     {
-                        receiveTextBox.AppendText("发送16进制指令："+sendTextBox.Text+"\r\n"); 
-                        string sendText = (sendTextBox.Text).Replace(" ", "");
-                        if ((sendText.Length % 2)!=0)
-                        {
-                            sendText += " ";
-                        }
-                        byte[] byteData = new byte[sendText.Length / 2];
-                        for(int i=0;i<byteData.Length;i++)
-                        {
-                            byteData[i] = Convert.ToByte(sendText.Substring(i * 2, 2), 16);
-                        }
-                        try
-                        {
-                            serialPort.Write(byteData, 0, byteData.Length);
-                        }
-                        catch
-                        {
-                            MessageBox.Show("发送16进制指令失败");
-                        }
+            if (hexSendRadioButton.Checked) //如果选中了16进制发送
+            {
+                receiveTextBox.AppendText("发送16进制指令："+sendTextBox.Text+"\r\n"); 
+                string sendText = (sendTextBox.Text).Replace(" ", "");  //我假定输入发送框的指令之间都是以空格分隔的。
+                if ((sendText.Length % 2)!=0)  //这个操作为了下面的 byteData[] 的分配正常
+                {
+                    sendText += " ";
+                }
+                byte[] byteData = new byte[sendText.Length / 2];
+                for(int i=0;i<byteData.Length;i++)
+                {
+                    byteData[i] = Convert.ToByte(sendText.Substring(i * 2, 2), 16);  //这个是将 16进制转成字节类型数据。
+                }
+                try
+                {
+                    serialPort.Write(byteData, 0, byteData.Length);  //serialPort.Write既可以写字节型数据，也可以写字符型数据
+                                    }
+                catch
+                {
+                    MessageBox.Show("发送16进制指令失败");
+                }
                      
                       
-                    }
-                    else //如果选中的发送模式是ASCII
-                    {
-                        receiveTextBox.AppendText("发送Ascii指令：" + sendTextBox.Text + "\r\n");
-                        string sendText = (sendTextBox.Text).Replace(" ", "");
-                        byte[] temp = Encoding.Default.GetBytes(sendText);
-                        try
-                        {
-                            serialPort.Write(temp, 0, temp.Length);
-                        }
-                        catch
-                        {
-                            MessageBox.Show("发送Ascii指令失败");
-                        }
-                    }
+            }
+            else //如果选中的发送模式是ASCII
+            {
+                receiveTextBox.AppendText("发送Ascii指令：" + sendTextBox.Text + "\r\n");
+                string sendText = (sendTextBox.Text).Replace(" ", "");
+                byte[] temp = Encoding.Default.GetBytes(sendText);
+                try
+                {
+                    serialPort.Write(temp, 0, temp.Length);
+                }
+                catch
+                {
+                    MessageBox.Show("发送Ascii指令失败");
+                }
+            }
 
-                    //下面就是储存指令的操作
-                    for (int i = 0; i < StoreComboBox.Items.Count; i++)
-                    {
-                        if (string.Equals(sendTextBox.Text, StoreComboBox.Items[i].ToString()))
-                        {
-                            flag = false;
-                        }
-                    }
-                    if (flag == true)
-                    {
-                        StoreComboBox.Items.Add(sendTextBox.Text);
-                    }
+        //下面就是储存指令的操作
+        for (int i = 0; i < StoreComboBox.Items.Count; i++)
+        {
+            if (string.Equals(sendTextBox.Text, StoreComboBox.Items[i].ToString())) //判断每一次发送的指令是否和之前的一样，假如不同就储存起来
+            {
+                flag = false;
+            }
+        }
+        if (flag == true)
+        {
+            StoreComboBox.Items.Add(sendTextBox.Text);  //将每次发送不同的指令储存起来
+        }
 
-                    if (StoreComboBox.Items.Count == 1)
-                        StoreComboBox.Text = StoreComboBox.Items[0].ToString();
-                    else
-                        StoreComboBox.Text = StoreComboBox.Items[StoreComboBox.SelectedIndex].ToString();
+        if (StoreComboBox.Items.Count == 1)   //假如存储的指令只有一条，那么 ComboBox 的默认值就是第一个
+            StoreComboBox.Text = StoreComboBox.Items[0].ToString();
+        else
+            StoreComboBox.Text = StoreComboBox.Items[StoreComboBox.SelectedIndex].ToString(); //否则，就将默认值设为光标处。
                 }
             }
             else
@@ -353,8 +354,8 @@ namespace 串口调试助手
         /// <param name="e"></param>
         private void All_Click(object sender, EventArgs e)
         {
-            if (sendTextBox.Focused)
-            {               
+            if (sendTextBox.Focused) //当光标在这个TextBox 上面的时候
+                    {               
                 sendTextBox.SelectAll(); 
             }
             if (receiveTextBox.Focused)
@@ -397,8 +398,8 @@ namespace 串口调试助手
         /// <param name="e"></param>
         private void Copy_Click(object sender, EventArgs e)
         {
-            if (sendTextBox.Focused)
-            {
+            if (sendTextBox.Focused) //当光标在这个TextBox 上面的时候
+                    {
                 //Clipboard.SetText(sendTextBox.SelectedText);  //这里注意是被选中的字符
                 sendTextBox.Copy();
             }
@@ -423,7 +424,7 @@ namespace 串口调试助手
         /// <param name="e"></param>
         private void Paste_Click(object sender, EventArgs e)
         {
-            if (sendTextBox.Focused)
+            if (sendTextBox.Focused) //当光标在这个TextBox 上面的时候
             {
                 //sendTextBox.AppendText( Clipboard.GetText());
                 sendTextBox.Paste();
